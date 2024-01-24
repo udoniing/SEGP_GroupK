@@ -1,130 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>RFA Simulation</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	<script src="https://kit.fontawesome.com/4340db9199.js" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-	<link rel="shortcut icon" href="{{ url_for('static', filename='images/livercancer-updated.png') }}">
-</head>
+{% block content %}
+<section id="simulateRFA">
+	<video autoplay muted loop id="backgroundVideo4">
+		<source src="{{ url_for('static', filename='videos/test4.mp4') }}" type="video/mp4">
+	</video>
+	<div class="simulateRFA">
+		<br> <br> 
+		<h1>Simulate RFA</h1>
+	</div>
 
-<body>
-    <!--Create Menu-->
-	<section id="navigate">
-		<nav class="navigation">
-			<!--logo-->
-			<a href="#" class="logo"><span>NOL</span></a>
-			<!--menu-->
-			<div class="menu-icon" onclick="toggleMenu()">
-    			<div class="bar"></div>
-    			<div class="bar"></div>
-    			<div class="bar"></div>
-			</div>
-			<div class="menu">
-				<ul>
-				<li><a href="{{ url_for('home') }}">HOME</a></li>
-				<li><a href="#">ABOUT</a></li>
-				<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
-				<li><a href="{{ url_for('login') }}">LOGIN</a></li>
-			</ul>
-			</div>
-		</nav>
-	</section>
-
-    <section id="simulateRFA">
-		<video autoplay muted loop id="backgroundVideo">
-			<source src="{{ url_for('static', filename='videos/test4.mp4') }}" type="video/mp4">
-		</video>
-        <div class="simulateRFA">
-            <br> <br> 
-            <h1>Simulate RFA</h1>
-        </div>
-
-		<div class = "form" id="inputData">
-			<div class="form-form input-Data">
-				<form action="">
-					<h2>Input Parameters</h2>
-					<div class="input-group3">
-						<label for="">Upload Images</label>
-						<input type="file" required>
-						<br><br>
-					</div>
-					<br>
-					<div class="input-group2">
-						<input type="text" required>
-						<label for="">Enter Voltage</label>
-					</div>
-					<br>
-					<div class="input-group2">
-						<input type="text" required>
-						<label for="">Enter Duration</label>
-					</div>
-					<br>
-					<div class="input-group2">
-						<input type="text" required>
-						<label for="">Enter Probe Dimension</label>
-					</div>
-				</form>
-			</div>
-		</div>
-
-        <div class="startbutton">
-            <button type="button" onclick="openPopup()"><span></span>Start</button>
-        </div>
-        </div>
-
-		<div class="popup-container" id="popupContainer" onclick="closePopup()">
-			<div class="popup-content" onclick="event.stopPropagation();">
-				<!-- Close button for the pop-up -->
-				<span class="close-btn" onclick="closePopup()">&times;</span>
-				<!-- Pop-up content goes here -->
-				<h2>Results</h2>
-				<p>Results will be shown here.</p>
-			</div>
-		</div>
-    </section>
-
-    <footer>
-		<div class="footer-container">
-			<div class="footer-company-box">
-				<a href="#" class="logo1"><span>NOL</span></a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt ligula sit amet maximus molestie. Aliquam facilisis dignissim sodales. In id pulvinar est, non posuere nisl. </p>
-				<div class="footer-social">
-					<i class="fa-brands fa-facebook"></i>
-					<i class="fa-brands fa-instagram"></i>
-					<i class="fa-brands fa-twitter"></i>
-					<i class="fa-brands fa-youtube"></i>
+	<div class = "form" id="inputData">
+		<div class="form-form input-Data">
+			<form action="">
+				<h2>Input Parameters</h2>
+				<div class="input-group3">
+					<label for="">Upload Images</label>
+					<input type="file" required>
+					<br><br>
 				</div>
-			</div>
-
-			<div class="footer-link-box">
-				<h3>Links</h3>
-				<ul>
-					<li><a href="{{ url_for('home') }}">Home</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="{{ url_for('page2') }}">Simulation</a></li>
-					<li><a href="{{ url_for('login') }}">Login</a></li>
-				</ul>
-			</div>
+				<br>
+				<div class="input-group2">
+					<input type="text" required>
+					<label for="">Enter Voltage</label>
+				</div>
+				<br>
+				<div class="input-group2">
+					<input type="text" required>
+					<label for="">Enter Duration</label>
+				</div>
+				<br>
+				<div class="input-group2">
+					<input type="text" required>
+					<label for="">Enter Probe Dimension</label>
+				</div>
+			</form>
 		</div>
-		<hr>
+	</div>
 
-		<a class="footer-etc"> NOL © 2023 - All Rights Reserved</a>
+	<div class="startbutton">
+		<button type="button" onclick="openPopup()"><span></span>Start</button>
+	</div>
+	</div>
 
-		<p class="footer-etc">
-			<a href="https://www.tempus.com/privacy/">Privacy Policy</a>
-			<span class="divide">|</span>
-			<a href="https://www.tempus.com/terms-of-use/">Terms of Use</a>
-			<span class="divide">|</span>
-			<a href="">Cookies Settings</a>
-		</p>
-
-	</footer>
-	<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-</body>
-</html>
+	<div class="popup-container" id="popupContainer" onclick="closePopup()">
+		<div class="popup-content" onclick="event.stopPropagation();">
+			<!-- Close button for the pop-up -->
+			<span class="close-btn" onclick="closePopup()">&times;</span>
+			<!-- Pop-up content goes here -->
+			<h2>Results</h2>
+			<p>Results will be shown here.</p>
+		</div>
+	</div>
+</section>
+{% endblock %}
