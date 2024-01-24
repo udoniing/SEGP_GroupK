@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>NOL-Based RFA Planning</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<script src="https://kit.fontawesome.com/4340db9199.js" crossorigin="anonymous"></script>
-	<link rel="shortcut icon" href="livercancer-updated.png">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/livercancer-updated.png') }}">
 </head>
 <body onscroll="handleScroll()">
 	<!--Create Menu-->
@@ -24,10 +24,10 @@
 			</div>
 			<div class="menu">
 				<ul>
-				<li><a href="test segp.html">HOME</a></li>
-				<li><a href="">ABOUT</a></li>
-				<li><a href="test segp2.html">SIMULATION</a></li>
-				<li><a href="login page.html">LOGIN</a></li>
+					<li><a href="{{ url_for('home') }}">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
+					<li><a href="{{ url_for('login') }}">LOGIN</a></li>
 			</ul>
 			</div>
 		</nav>
@@ -35,7 +35,7 @@
 
 	<section id="content">
 		<video autoplay muted loop id="backgroundVideo">
-			<source src="test1.mp4" type="video/mp4">
+			<source src="{{ url_for('static', filename='videos/test1.mp4') }}" type="video/mp4">
 		</video>
 		<div class="headline">
 			<h1>Next-Gen<br>RFA Simulation</h1>
@@ -45,7 +45,7 @@
 
 	<section id="content2">
 		<video autoplay muted loop id="backgroundVideo2">
-			<source src="test1.mp4" type="video/mp4">
+			<source src="{{ url_for('static', filename='videos/test1.mp4') }}" type="video/mp4">
 		</video>
 		<div class="tagline">
 			<h2>REVOLUTIONIZE</h2>
@@ -59,7 +59,7 @@
 
 	<section id="content3">
 		<video autoplay muted loop id="backgroundVideo3">
-			<source src="test6.mp4" type="video/mp4">
+			<source src="{{ url_for('static', filename='videos/test6.mp4') }}" type="video/mp4">
 		</video>
 		<div class="title-for-c5 appear">
 			<h2>Unlocking precision through AI<br>for advanced<br>liver cancer treatment planning</h2>
@@ -103,10 +103,10 @@
 			<div class="footer-link-box">
 				<h3>Links</h3>
 				<ul>
-					<li><a href="test segp.html">Home</a></li>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
 					<li><a href="">About</a></li>
-					<li><a href="test segp2.html">Simulation</a></li>
-					<li><a href="login page.html">Login</a></li>
+					<li><a href="{{ url_for('page2') }}">Simulation</a></li>
+					<li><a href="{{ url_for('login') }}">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -125,7 +125,7 @@
 
 	</footer>
 
-	<script src="script.js"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>

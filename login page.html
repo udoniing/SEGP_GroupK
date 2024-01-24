@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, intial-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>NOL-Based RFA Planning</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<script src="https://kit.fontawesome.com/4340db9199.js" crossorigin="anonymous"></script>
-	<link rel="shortcut icon" href="livercancer-updated.png">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/livercancer-updated.png') }}">
 </head>
 <body>
     <!--Create Menu-->
@@ -24,17 +24,17 @@
 			</div>
 			<div class="menu">
 				<ul>
-				<li><a href="test segp.html">HOME</a></li>
-				<li><a href="#">ABOUT</a></li>
-				<li><a href="test segp2.html">SIMULATION</a></li>
-				<li><a href="login page.html">LOGIN</a></li>
+					<li><a href="{{ url_for('home') }}">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
+					<li><a href="{{ url_for('login') }}">LOGIN</a></li>
 			</ul>
 			</div>
 		</nav>
 	</section>
 
 	<video autoplay muted loop id="backgroundVideo4">
-		<source src="test4.mp4" type="video/mp4">
+		<source src="{{ url_for('static', filename='videos/test4.mp4') }}" type="video/mp4">
 	</video>
 
     <div class = "card" id="signInCard">
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 	<footer>
@@ -106,10 +106,10 @@
 			<div class="footer-link-box">
 				<h3>Links</h3>
 				<ul>
-					<li><a href="test segp.html">Home</a></li>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
 					<li><a href="">About</a></li>
-					<li><a href="test segp2.html">Simulation</a></li>
-					<li><a href="login page.html">Login</a></li>
+					<li><a href="{{ url_for('page2') }}">Simulation</a></li>
+					<li><a href="{{ url_for('login') }}">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -128,7 +128,7 @@
 
 	</footer>
 
-	<script src="script.js"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
