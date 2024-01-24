@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>RFA Simulation</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<script src="https://kit.fontawesome.com/4340db9199.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-	<link rel="shortcut icon" href="livercancer-updated.png">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/livercancer-updated.png') }}">
 </head>
 
 <body>
@@ -26,10 +26,10 @@
 			</div>
 			<div class="menu">
 				<ul>
-				<li><a href="test segp.html">HOME</a></li>
+				<li><a href="{{ url_for('home') }}">HOME</a></li>
 				<li><a href="#">ABOUT</a></li>
-				<li><a href="test segp2.html">SIMULATION</a></li>
-				<li><a href="login page.html">LOGIN</a></li>
+				<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
+				<li><a href="{{ url_for('login') }}">LOGIN</a></li>
 			</ul>
 			</div>
 		</nav>
@@ -37,7 +37,7 @@
 
     <section id="simulateRFA">
 		<video autoplay muted loop id="backgroundVideo">
-			<source src="test4.mp4" type="video/mp4">
+			<source src="{{ url_for('static', filename='videos/test4.mp4') }}" type="video/mp4">
 		</video>
         <div class="simulateRFA">
             <br> <br> 
@@ -104,10 +104,10 @@
 			<div class="footer-link-box">
 				<h3>Links</h3>
 				<ul>
-					<li><a href="test segp.html">Home</a></li>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
 					<li><a href="">About</a></li>
-					<li><a href="test segp2.html">Simulation</a></li>
-					<li><a href="login page.html">Login</a></li>
+					<li><a href="{{ url_for('page2') }}">Simulation</a></li>
+					<li><a href="{{ url_for('login') }}">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -116,7 +116,6 @@
 		<a class="footer-etc"> NOL © 2023 - All Rights Reserved</a>
 
 		<p class="footer-etc">
-
 			<a href="https://www.tempus.com/privacy/">Privacy Policy</a>
 			<span class="divide">|</span>
 			<a href="https://www.tempus.com/terms-of-use/">Terms of Use</a>
@@ -125,7 +124,7 @@
 		</p>
 
 	</footer>
-	<script src="script.js"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
