@@ -8,7 +8,7 @@
 
 <div class = "card" id="signInCard">
 	<div class="form-card sign-in">
-		<form action="">
+		<form method="POST" action="{{ url_for('login') }}">
 			<h2>Login</h2>
 			<div class="input-group">
 				<input type="text" required>
@@ -31,7 +31,7 @@
 <br>
 <div class = "card" id="signUpCard">
 	<div class="form-card sign-in">
-		<form action="">
+		<form method="POST" action="{{ url_for('signup') }}">
 			<h2>Sign Up</h2>
 			<div class="input-group">
 				<input type="text" required>
