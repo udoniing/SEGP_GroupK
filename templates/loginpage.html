@@ -23,34 +23,7 @@
 			</div>
 			<button type="submit">Login</button>
 			<div class="signUp-link">
-				<p>Don't have an account? <a href="#" class="signUp-button-link">Sign Up</a></p>
-			</div>
-		</form>
-	</div>
-</div>
-<br>
-<div class = "card" id="signUpCard">
-	<div class="form-card sign-in">
-		<form method="POST" action="{{ url_for('signup') }}">
-			<h2>Sign Up</h2>
-			<div class="input-group">
-				<input type="text" required>
-				<label for="">Username</label>
-			</div>
-			<div class="input-group">
-				<input type="email" required>
-				<label for="">Email</label>
-			</div>
-			<div class="input-group">
-				<input type="password" required>
-				<label for="">Password</label>
-			</div>
-			<div class="remember">
-				<label for=""><input type="checkbox">I agree to the terms and conditions.</label>
-			</div>
-			<button type="submit">Sign Up</button>
-			<div class="signUp-link">
-				<p>Already have an account? <a href="#" class="signIn-button-link">Sign In</a></p>
+				<p>Don't have an account? <a href="{{ url_for('signup') }}" class="signUp-button-link">Sign Up</a></p>
 			</div>
 		</form>
 	</div>
