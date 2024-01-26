@@ -9,44 +9,6 @@
         label.textContent = fileName;
     }
 
-    function startSimulation() {
-        // Redirect to another page
-        window.location.href = 'test segp2.html';
-        // Replace 'another-page.html' with the actual URL of the page you want to navigate to
-    }
-
-    /*function updateTitleOnScroll() {
-        var signInCard = document.getElementById('signInCard');
-        var signUpCard = document.getElementById('signUpCard');
-
-        var signInCardTop = signInCard.getBoundingClientRect().top;
-        var signUpCardTop = signUpCard.getBoundingClientRect().top;
-
-        if (signInCardTop >= 0 && signInCardTop < window.innerHeight / 2) {
-            document.title = 'Login';
-        } else if (signUpCardTop >= 0 && signUpCardTop < window.innerHeight / 2) {
-            document.title = 'Sign Up';
-        }
-    }
-    
-    document.querySelector('.signUp-button-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 800,
-            behavior: 'smooth'
-        });
-        document.title = "Sign Up";
-    });
-
-    document.querySelector('.signIn-button-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-        document.title = "Login";
-    }); */
-
     window.addEventListener('scroll', updateTitleOnScroll);
 
 // Function to open the pop-up
