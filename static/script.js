@@ -29,7 +29,7 @@
         }
     }
     
-    document.querySelector('.signUp-button-link').addEventListener('click', function (e) {
+    /*document.querySelector('.signUp-button-link').addEventListener('click', function (e) {
         e.preventDefault();
         window.scrollTo({
             top: 800,
@@ -45,7 +45,7 @@
             behavior: 'smooth'
         });
         document.title = "Login";
-    });
+    }); */
 
     window.addEventListener('scroll', updateTitleOnScroll);
 
