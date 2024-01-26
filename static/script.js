@@ -15,7 +15,7 @@
         // Replace 'another-page.html' with the actual URL of the page you want to navigate to
     }
 
-    function updateTitleOnScroll() {
+    /*function updateTitleOnScroll() {
         var signInCard = document.getElementById('signInCard');
         var signUpCard = document.getElementById('signUpCard');
 
@@ -29,7 +29,7 @@
         }
     }
     
-    /*document.querySelector('.signUp-button-link').addEventListener('click', function (e) {
+    document.querySelector('.signUp-button-link').addEventListener('click', function (e) {
         e.preventDefault();
         window.scrollTo({
             top: 800,
