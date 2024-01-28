@@ -2,6 +2,12 @@
 
 {% block content %}
 
+	{% if error_msg %}
+	<div class="alert alert-danger" role="alert">
+    	{{ error_msg }}
+	</div>
+	{% endif %}
+
 <video autoplay muted loop id="backgroundVideo4">
 	<source src="{{ url_for('static', filename='videos/test4.mp4') }}" type="video/mp4">
 </video>

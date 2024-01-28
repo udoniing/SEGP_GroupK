@@ -2,7 +2,14 @@
 
 {% block content %}
 
+{% if error_msg %}
+<div class="alert alert-danger" role="alert">
+    {{ error_msg }}
+</div>
+{% endif %}
+
 <div class = "card" id="signUpCard">
+	
 	<div class="form-card sign-in">
 		<form method="POST" action="{{ url_for('signup') }}">
 			<h2>Sign Up</h2>
@@ -11,9 +18,9 @@
 				<label for="">Username</label>
 			</div>
 			<div class="input-group">
-				<input type="email" name="email" required>
-				<label for="">Email</label>
-			</div>
+                <input type="email" id="email" name="email" required>
+                <label for="">Email</label>
+            </div>
 			<div class="input-group">
 				<input type="password" name="password" required>
 				<label for="">Password</label>
@@ -21,12 +28,15 @@
 			<div class="remember">
 				<label for=""><input type="checkbox" required>I agree to the terms and conditions.</label>
 			</div>
+			
 			<button type="submit">Sign Up</button>
+
 			<div class="signUp-link">
 				<p>Already have an account? <a href="{{ url_for('login') }}" class="signIn-button-link">Sign In</a></p>
 			</div>
 		</form>
 	</div>
 </div>
+
 
 {% endblock %}
