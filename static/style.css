@@ -406,6 +406,12 @@ outline: none;
   border-color: #f5c6cb;
 }
 
+.alert-success {
+color: #3c763d;
+background-color: #dff0d8;
+border-color: #d6e9c6;
+}
+
 
 .startbutton {
   padding: 10px;
