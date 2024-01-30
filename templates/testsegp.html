@@ -27,7 +27,16 @@
 					<li><a href="{{ url_for('home') }}">HOME</a></li>
 					<li><a href="#">ABOUT</a></li>
 					<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
-					<li><a href="{{ url_for('login') }}">LOGIN</a></li>
+					{% if 'username' in session %}
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">WELCOME, {{ session['username'] }}</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('logout') }}">LOGOUT</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+                    {% endif %}
 			</ul>
 			</div>
 		</nav>
