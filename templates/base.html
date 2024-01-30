@@ -12,7 +12,35 @@
 </head>
 
 <body>
-    {% include 'navigation.html' %}
+    <section id="navigate">
+		<nav class="navigation">
+			<!--logo-->
+			<a href="{{ url_for('home') }}" class="logo"><span>NOL</span></a>
+			<!--menu-->
+			<div class="menu-icon" onclick="toggleMenu()">
+    			<div class="bar"></div>
+    			<div class="bar"></div>
+    			<div class="bar"></div>
+			</div>
+			<div class="menu">
+				<ul>
+				<li><a href="{{ url_for('home') }}">HOME</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="{{ url_for('page2') }}">SIMULATION</a></li>
+				{% if 'username' in session %}
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">WELCOME, {{ session['username'] }}</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('logout') }}">LOGOUT</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+                    {% endif %}
+			</ul>
+			</div>
+		</nav>
+	</section>
 
     {% block content %}{% endblock %}
 
