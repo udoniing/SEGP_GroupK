@@ -1,5 +1,6 @@
 ## Steps
-1. Execute the file "segp_flask.ipynb" on Jupyter Notebook.
+1. Download the file.
+2. Execute the file "segp_flask.ipynb" on Jupyter Notebook.
 ## Details
 ![image](https://github.com/udoniing/SEGP_GroupK/assets/146621256/0c94d705-b3c9-41b3-85fa-94a07c714cec)
 ![image](https://github.com/udoniing/SEGP_GroupK/assets/146621256/bf4fdc0b-59a1-471a-aaa0-c59fc4ccc6f7)
